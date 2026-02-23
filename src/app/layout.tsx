@@ -10,30 +10,84 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bikrambabu.com.np"),
   title: "Er. Bikram Babu KC | Civil Engineer & Vastu Shashtri",
-  description: "Portfolio of Er. Bikram Babu KC, a multi-disciplinary civil engineering professional bridging ancient Vastu Shastra with modern structural engineering in Nepal.",
-  keywords: ["Civil Engineer", "Vastu Shashtri", "Nepal", "Bikram Babu KC", "Structural Engineering", "Life Coach"],
-  authors: [{ name: "Er. Bikram Babu KC" }],
+  description:
+    "Portfolio of Er. Bikram Babu KC, a multi-disciplinary civil engineering professional bridging ancient Vastu Shastra with modern structural engineering in Nepal.",
+  keywords: [
+    "Civil Engineer Nepal",
+    "Vastu Shashtri Nepal",
+    "Bikram Babu KC",
+    "Structural Engineering Nepal",
+    "Vastu Consultant Dang",
+    "Life Coach Nepal",
+    "PrimeFace Engineering",
+  ],
+  authors: [{ name: "Er. Bikram Babu KC", url: "https://bikrambabu.com.np" }],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
-    icon: "/bikramdailogo.png",
-    shortcut: "/bikramdailogo.png",
-    apple: "/bikramdailogo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: "Er. Bikram Babu KC | Civil Engineer & Vastu Shashtri",
-    description: "Portfolio of Er. Bikram Babu KC, a multi-disciplinary civil engineering professional bridging ancient Vastu Shastra with modern structural engineering in Nepal.",
+    description:
+      "Portfolio of Er. Bikram Babu KC, a multi-disciplinary civil engineering professional bridging ancient Vastu Shastra with modern structural engineering in Nepal.",
     url: "https://bikrambabu.com.np",
-    siteName: "Er. Bikram Babu KC Portfolio",
+    siteName: "Er. Bikram Babu KC",
     images: [
       {
         url: "/bikramdailogo.png",
-        width: 800,
-        height: 600,
-        alt: "Er. Bikram Babu KC Logo",
+        width: 1024,
+        height: 1024,
+        alt: "Er. Bikram Babu KC — Civil Engineer & Vastu Shashtri",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Er. Bikram Babu KC | Civil Engineer & Vastu Shashtri",
+    description:
+      "Portfolio of Er. Bikram Babu KC, bridging ancient Vastu Shastra with modern structural engineering in Nepal.",
+    images: ["/bikramdailogo.png"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Er. Bikram Babu KC",
+  url: "https://bikrambabu.com.np",
+  image: "https://bikrambabu.com.np/bikrambabu.jpeg",
+  jobTitle: "Civil Engineer & Vastu Shashtri",
+  description:
+    "Civil Engineer and Vastu Shashtri bridging ancient Vastu Shastra with modern structural engineering in Nepal. Founder & CEO of PrimeFace Engineering Consultancy.",
+  worksFor: {
+    "@type": "Organization",
+    name: "PrimeFace Engineering Consultancy Pvt. Ltd.",
+    url: "https://www.theprimeface.com",
+  },
+  sameAs: ["https://www.theprimeface.com"],
+  knowsAbout: [
+    "Vastu Shastra",
+    "Structural Engineering",
+    "Civil Engineering",
+    "Life Coaching",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Dang",
+    addressRegion: "Lumbini",
+    addressCountry: "NP",
   },
 };
 
@@ -44,7 +98,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased selection:bg-neon selection:text-black`}>
+      <body
+        className={`${inter.variable} antialiased selection:bg-neon selection:text-black`}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Providers>
           <FramerBackground />
           {children}
