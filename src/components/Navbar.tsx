@@ -47,7 +47,7 @@ const Navbar = () => {
             className="w-10 h-10 object-contain group-hover:drop-shadow-[0_0_8px_rgba(24,210,110,0.8)] transition-all duration-300"
           />
           <span className="font-bold text-xl tracking-wide text-white group-hover:text-neon transition-colors duration-300">
-            Bikram Babu
+            BBKC
           </span>
         </a>
 

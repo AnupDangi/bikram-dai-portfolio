@@ -10,7 +10,7 @@ export default function AboutSection() {
                         I am a multi-disciplinary civil engineering professional from Dang, Nepal. With over a decade of hands-on expertise, I uniquely bridge the ancient science of Vastu Shastra with modern structural engineering — a rare combination that has made me one of Nepal's most sought-after consultants.
                     </p>
                     <p className="text-lg text-gray-300 leading-relaxed">
-                        I founded <strong className="text-white">PrimeFace Engineering Consultancy Pvt. Ltd.</strong> in 2015 with a mission to bring harmony, precision, and cultural wisdom together under one roof. Beyond engineering, I actively serve as a life coach, educating thousands on YouTube and TikTok to empower them to make smarter decisions about their homes and lives.
+                        I founded <strong className="text-white">PrimeFace Engineering Consultancy Pvt. Ltd.</strong> in 2017 with a mission to bring harmony, precision, and cultural wisdom together under one roof. Beyond engineering, I actively serve as a life coach,Vedic Vastu consultant educating thousands on YouTube and TikTok to empower them to make smarter decisions about their homes and lives.
                     </p>
                 </div>
 
